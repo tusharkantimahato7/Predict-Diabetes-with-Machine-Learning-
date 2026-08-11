@@ -1,0 +1,6 @@
+{
+  "name": "Diabetes ML Predictor",
+  "description": "Interactive machine learning pipeline and playground for predicting diabetes using Pima Indians Clinical Data",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

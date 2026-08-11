@@ -1,0 +1,30 @@
+{
+  "name": "predict-diabetes-ml",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 3000",
+    "build": "tsc && vite build",
+    "lint": "tsc --noEmit",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "lucide-react": "^0.435.0",
+    "recharts": "^2.12.7",
+    "motion": "^11.11.17",
+    "papaparse": "^5.4.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@types/papaparse": "^5.3.15",
+    "@vitejs/plugin-react": "^4.3.3",
+    "@tailwindcss/vite": "^4.0.0-alpha.25",
+    "tailwindcss": "^4.0.0-alpha.25",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  }
+}
