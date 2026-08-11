@@ -3,7 +3,8 @@
 A small Vite React app that simulates diabetes risk prediction entirely in the browser.
 
 ## 🌐 Live Website
-No deployed website URL was found in this repository.
+
+Pending verified production deployment. A clickable live URL will be added here only after the site is confirmed reachable.
 
 ## Overview
 
@@ -91,19 +92,28 @@ There is no backend, API, database, or authentication configured.
 
 ## Deployment
 
-No deployment files or platform configuration were detected in this repository. A live URL could not be verified from the available files.
+**Recommended platform: [Vercel](https://vercel.com)** — this project is a static Vite SPA with no backend, database, or environment variables. Vercel auto-detects Vite and serves the `dist/` output.
+
+| Setting | Value |
+|---|---|
+| Build command | `npm run build` |
+| Output directory | `dist` |
+| Install command | `npm install` |
+| Environment variables | None required |
+| Framework | Vite (see `vercel.json`) |
+
+A live production URL will be added here only after deployment is verified.
+
+### GitHub repository
+
+Local Git is initialized on `main`. Remote push and repository URL are pending GitHub authentication.
 
 ## Future Improvements
 
-- Add deployment configuration for Vercel, Netlify, or GitHub Pages
-- Add backend/API support for persistent data
+- Complete GitHub remote + Vercel production deploy, then add verified live URL
 - Add automated tests for UI and model functions
 - Extract model logic into reusable hooks or services
-- Add a real dataset source instead of embedded synthetic data
-
-## Author
-
-No verified author metadata is available from the repository.
+- Optionally add a real external dataset source instead of embedded/synthetic data
 
 ## License
 
