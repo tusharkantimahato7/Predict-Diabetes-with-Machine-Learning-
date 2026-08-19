@@ -319,7 +319,7 @@ export function predictKNN(
 
   // Average outcomes
   const positiveCount = nearestNeighbors.filter(n => n.patient.Outcome === 1).length;
-  const probability = positiveCount / k;
+  const probability = positiveCount / (nearestNeighbors.length || 1);
   const prediction = probability >= 0.5 ? 1 : 0;
 
   return {
