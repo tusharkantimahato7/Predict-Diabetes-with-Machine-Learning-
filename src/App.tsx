@@ -11,7 +11,8 @@ import { Header } from './components/Header';
 import { PredictorForm } from './components/PredictorForm';
 import { ModelComparison } from './components/ModelComparison';
 import { DatasetVisualizer } from './components/DatasetVisualizer';
-import { Stethoscope, BarChart2, Database, GitBranch } from 'lucide-react';
+import { AboutSection } from './components/AboutSection';
+import { Stethoscope, BarChart2, Database, Info, GitBranch } from 'lucide-react';
 
 // Deterministic train-test split helper
 function trainTestSplit(data: PatientData[], testRatio: number = 0.3) {
@@ -38,7 +39,7 @@ function trainTestSplit(data: PatientData[], testRatio: number = 0.3) {
 }
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'predict' | 'evaluate' | 'dataset'>('predict');
+  const [activeTab, setActiveTab] = useState<'predict' | 'evaluate' | 'dataset' | 'about'>('predict');
   const [dataset] = useState<PatientData[]>(DEFAULT_DATASET);
 
   // Model Hyperparameters
@@ -136,8 +137,8 @@ export default function App() {
       <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full space-y-6">
         
         {/* Navigation Tabs */}
-        <div className="flex border-b border-slate-200">
-          <nav className="flex space-x-6 -mb-px" aria-label="Tabs" id="app-main-tabs">
+        <div className="flex border-b border-slate-200 overflow-x-auto">
+          <nav className="flex space-x-6 -mb-px min-w-max" aria-label="Tabs" id="app-main-tabs">
             <button
               id="tab-btn-predict"
               onClick={() => setActiveTab('predict')}
@@ -176,6 +177,19 @@ export default function App() {
               <Database className="h-4 w-4" />
               <span>Dataset Explorer</span>
             </button>
+
+            <button
+              id="tab-btn-about"
+              onClick={() => setActiveTab('about')}
+              className={`flex items-center space-x-2 py-4 px-1 border-b-2 font-display font-bold text-sm transition-all ${
+                activeTab === 'about'
+                  ? 'border-red-500 text-red-600'
+                  : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
+              }`}
+            >
+              <Info className="h-4 w-4" />
+              <span>About</span>
+            </button>
           </nav>
         </div>
 
@@ -203,6 +217,10 @@ export default function App() {
 
           {activeTab === 'dataset' && (
             <DatasetVisualizer dataset={dataset} />
+          )}
+
+          {activeTab === 'about' && (
+            <AboutSection />
           )}
         </div>
 
