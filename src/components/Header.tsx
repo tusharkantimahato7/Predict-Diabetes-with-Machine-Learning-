@@ -26,9 +26,9 @@ export const Header: React.FC<HeaderProps> = ({ datasetSize }) => {
             <ShieldCheck className="h-4 w-4" />
             <span>Active Model: Client-Side ML Sandbox</span>
           </div>
-          <div className="flex items-center space-x-2 text-xs bg-slate-100 text-slate-700 border border-slate-200 px-3 py-1.5 rounded-lg font-mono">
+          <div className="flex shrink-0 items-center space-x-2 text-xs bg-slate-100 text-slate-700 border border-slate-200 px-2 sm:px-3 py-1.5 rounded-lg font-mono">
             <Database className="h-4 w-4 text-slate-500" />
-            <span>N={datasetSize} patients</span>
+            <span>N={datasetSize}<span className="hidden sm:inline"> patients</span></span>
           </div>
         </div>
       </div>

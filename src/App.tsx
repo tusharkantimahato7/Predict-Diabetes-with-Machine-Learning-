@@ -137,8 +137,8 @@ export default function App() {
       <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full space-y-6">
         
         {/* Navigation Tabs */}
-        <div className="flex border-b border-slate-200 overflow-x-auto">
-          <nav className="flex space-x-6 -mb-px min-w-max" aria-label="Tabs" id="app-main-tabs">
+        <div className="flex border-b border-slate-200">
+          <nav className="flex flex-wrap gap-x-4 -mb-px" aria-label="Tabs" id="app-main-tabs">
             <button
               id="tab-btn-predict"
               onClick={() => setActiveTab('predict')}

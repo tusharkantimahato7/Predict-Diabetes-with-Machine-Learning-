@@ -97,7 +97,7 @@ export const PredictorForm: React.FC<PredictorFormProps> = ({
       {/* Parameters Panel */}
       <div className="lg:col-span-7 bg-white rounded-2xl border border-slate-200 p-6 shadow-xs flex flex-col justify-between">
         <div>
-          <div className="flex items-center justify-between border-b border-slate-100 pb-4 mb-5">
+          <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between border-b border-slate-100 pb-4 mb-5">
             <div>
               <h2 className="text-lg font-bold text-slate-800 font-display flex items-center gap-2">
                 <Brain className="h-5 w-5 text-red-500" />
@@ -107,11 +107,11 @@ export const PredictorForm: React.FC<PredictorFormProps> = ({
             </div>
             
             {/* Model Selector */}
-            <div className="flex bg-slate-100 p-1 rounded-xl border border-slate-200">
+            <div className="flex w-full sm:w-auto bg-slate-100 p-1 rounded-xl border border-slate-200">
               <button
                 id="btn-model-logistic"
                 onClick={() => setModelType('logistic')}
-                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                className={`flex-1 sm:flex-none px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                   modelType === 'logistic' 
                     ? 'bg-white text-slate-900 shadow-xs border border-slate-200/50' 
                     : 'text-slate-500 hover:text-slate-900'
@@ -122,7 +122,7 @@ export const PredictorForm: React.FC<PredictorFormProps> = ({
               <button
                 id="btn-model-tree"
                 onClick={() => setModelType('decision_tree')}
-                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                className={`flex-1 sm:flex-none px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                   modelType === 'decision_tree' 
                     ? 'bg-white text-slate-900 shadow-xs border border-slate-200/50' 
                     : 'text-slate-500 hover:text-slate-900'
@@ -133,7 +133,7 @@ export const PredictorForm: React.FC<PredictorFormProps> = ({
               <button
                 id="btn-model-knn"
                 onClick={() => setModelType('knn')}
-                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                className={`flex-1 sm:flex-none px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                   modelType === 'knn' 
                     ? 'bg-white text-slate-900 shadow-xs border border-slate-200/50' 
                     : 'text-slate-500 hover:text-slate-900'
@@ -180,7 +180,7 @@ export const PredictorForm: React.FC<PredictorFormProps> = ({
           </div>
         </div>
 
-        <div className="mt-6 p-4 rounded-xl bg-slate-100 border border-slate-200 text-xs flex items-center justify-between text-slate-600">
+        <div className="mt-6 p-4 rounded-xl bg-slate-100 border border-slate-200 text-xs flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between text-slate-600">
           <div className="flex items-center space-x-2">
             <Sparkles className="h-4 w-4 text-amber-500 animate-pulse" />
             <span>Interactive sandbox. Drag parameters to recalculate risk instantly.</span>
